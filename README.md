@@ -1,6 +1,11 @@
 # IFE-QA
 前端css、js基础问题
 
+## index.html 
+https://dafengniao.github.io/IFE-QA
+左侧固定宽度，display(flex);
+点击某一区块获取某一区块的内容；
+
 ## css.html 
 https://dafengniao.github.io/IFE-QA/css.html
 css3 无缝滚动动画，鼠标放上暂停；
