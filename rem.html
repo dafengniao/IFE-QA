@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
+    <title>功能列表</title>
+    <script type="text/javascript">
+    	(function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 75 * (clientWidth / 750) + 'px';
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <style type="text/css">
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed, 
+      figure, figcaption, footer, header, hgroup, 
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video ,input {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article, aside, details, figcaption, figure, 
+      footer, header, hgroup, menu, nav, section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      blockquote, q {
+        quotes: none;
+      }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      .header{
+        background: #000;
+        height: 1.173333rem;
+        line-height: 1.173333rem;
+        font-size: 0.426667rem;
+        text-align: center;
+        color: #fff;
+        position: relative;
+      }
+      .header .return{
+        position: absolute;
+        width: 1.173333rem;
+        height: 1.173333rem;
+        background-image: url('./sprite.png');
+        background-position: 0 0;
+        background-size: 1.173333rem 5.146667rem; 
+        overflow: hidden;
+        top: 0;
+        left: 0;
+      }
+      .header .menu{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1.173333rem;
+        height: 1.173333rem;
+        background-image: url('./sprite.png');
+        background-position: 0 -1.173333rem;
+        background-size: 1.173333rem 5.146667rem; 
+      }
+      .menu-tt{
+        display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          width: 100%;
+          height: 1.173333rem;
+          background: #fff;
+          position: relative;
+          border-bottom: 0.026667rem solid rgba(0,0,0,1)
+      }
+      .menu-tt .play{
+        -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          text-align: center;
+          color: #969696;
+          line-height: 1.173333rem;
+          font-size: 0.426667rem;
+      }
+      .menu-tt .play.active{
+        color: #000;
+      }
+      .menu-tt .play + .play::after{
+        content: '';
+        height: 0.8rem;
+        width: 1px;
+        background: #000;
+        position: absolute;
+        top: 0.186667rem;
+        left: 50%;
+        margin-left: -0.0013333rem;
+      }
+      .d-icon{
+        width: 0.666667rem;
+        height: 0.666667rem;
+        background-image: url('./sprite.png');
+        background-position: 0 -3.28rem;
+        background-size: 1.173333rem 5.146667rem; 
+        overflow: hidden;
+        display: inline-block;
+          margin: 0.24rem 0;
+          vertical-align: top;
+      }
+      .z-icon{
+        width: 0.666667rem;
+        height: 0.666667rem;
+        background-image: url('./sprite.png');
+        background-position: 0 -3.946667rem;
+        background-size: 1.173333rem 5.146667rem; 
+        overflow: hidden;
+        display: inline-block;
+        margin: 0.24rem 0;
+          vertical-align: top;
+      }
+      .activity{
+        height: 1.333333rem;
+        line-height: 1.333333rem;
+        background: #fff;
+        padding: 0 0.373333rem 0 0.533333rem;
+        font-size: 0.426667rem;
+        color: #000;
+        position: relative;
+      }
+      .activity .edit{
+        width: 0.933333rem;
+        height: 0.933333rem;
+        position: absolute;
+        top: 0.2000003rem;
+        right: 0.373333rem;
+        background-image: url('./sprite.png');
+        background-position: 0 -2.346667rem;
+        background-size: 1.173333rem 5.146667rem; 
+        overflow: hidden;
+      }
+      .content{
+        font-size: 0;
+        width: 10.0rem;
+      }
+      .content::after{
+        display: block; 
+         clear: both; 
+         content: ""; 
+      }
+      .mr{
+        margin-right: 0.08rem;
+      }
+      .mt{
+        margin-top: 0.08rem;
+      }
+      .mtr{
+        margin-right: 0.08rem;
+        margin-top: 0.08rem;
+      }
+      .lesson{
+        display: inline-block;
+        background: #182435;
+        height: 2.666667rem;
+        color:#fff;
+        font-size: 0.426667rem;
+        text-align: center;
+          vertical-align: middle;
+      }
+      .lesson.all{
+        width: 5.333333rem;
+        line-height: 2.666667rem;
+      }
+      .lesson.china{
+        width: 4.586667rem;
+        line-height: 2.666667rem;
+      }
+      .lesson.yu{
+        width: 3.466667rem;
+      }
+      .descit{
+        width: 2.4rem;
+        margin:0.773333rem auto;
+          text-align: left;
+          vertical-align: middle;
+      }
+      .descit .title,.mb{
+        margin-bottom: 0.266667rem;
+      }
+      .lesson.eng{
+        width: 4.0rem;
+        line-height: 2.666667rem;
+      }
+      .lesson.more{
+        width: 2.373333rem;
+      }
+      .showall{
+        margin: 0.773333rem auto;
+      }
+      .splice{
+        width: 0.32rem;
+        height: 0.533333rem;
+        position: absolute;
+        top: 0.4rem;
+        right: 0.533333rem;
+        background-image: url('./sprite.png');
+        background-position: 0 -4.613333rem;
+        background-size: 1.173333rem 5.146667rem; 
+        overflow: hidden;
+      }
+      .cg-all .activity span{
+        position: absolute;
+        top: 0;
+        right: 0.933333rem;
+      }
+      .list-index{
+        width: 100%;
+        position: relative;
+      }
+      .list-index .banner{
+        width: 100%;
+        height: 2.213333rem;
+        background: #182435;
+        color:#fff;
+        text-align: center;
+        font-size: 0.426667rem;
+        line-height: 2.213333rem;
+      }
+      .tag{
+        width: 8.933333rem;
+        padding:0 0.533333rem 0.266667rem;
+        position: relative;
+        font-size: 0;
+        margin: 0 auto;
+      }
+      .tag .label{
+        display: inline-block;
+        width: 2.0rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        color: #000;
+        text-align: center;
+        font-size: 0.426667rem;
+        background: #e6e6e6;
+        border-radius: 0.533333rem;
+      }
+      .tag .label{
+        margin-right: 0.266667rem;
+        margin-top: 0.266667rem;
+      }
+      .tag .label:nth-child(4n){
+        margin-right: 0;
+      }
+
+    </style>
+  </head>
+  <body>
+	  <div class="home">
+      <div class="header">
+        <div class="return"></div>
+        功能列表
+        <div class="menu"></div>
+      </div>
+      <div class="menu-tt">
+        <div class="play active">
+          <div class="d-icon"></div>
+          点播
+        </div>
+        <div class="play">
+          <div class="z-icon"></div>
+          直播
+        </div>
+      </div>
+      <div class="active-all">
+        <div class="activity">
+          活动点播
+          <div class="edit"></div>
+        </div>
+        <div class="content">
+          <div class="lesson all mr">
+            XXX课程
+          </div>
+          <div class="lesson china">
+            语文XXXX
+          </div>
+          <div class="lesson yu mtr">
+            <div class="descit">
+              <div class="title">语文XXXX</div>
+              <div class="name">谁谁谁</div>
+            </div>
+            
+          </div>
+          <div class="lesson eng mtr">
+            英语XXXX
+          </div>
+          <div class="lesson more mt">
+            <div class="showall">
+              <div class="mb">显示</div>
+              <div>全部</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cg-all">
+        <div class="activity">
+          常态课点播
+          <span>按班级</span><div class="splice"></div>
+        </div>
+        <div class="list-all">
+          <div class="list-index">
+            <div class="banner">
+              高一年级
+            </div>
+            <div class="tag">
+              <div class="label">数学</div>
+              <div class="label">数学</div>
+              <div class="label">数学</div>
+              <div class="label">数学</div>
+              <div class="label">数学</div>
+              <div class="label">数学</div>
+              <div class="label">数学</div>
+              <div class="label">数学</div>
+              <div class="label">数学</div>
+              <div class="label">数学</div>
+            </div>
+          </div>
+          <div class="list-index mb">
+            <div class="banner">
+              高二年级
+            </div>
+          </div>
+          <div class="list-index">
+            <div class="banner">
+              高三年级
+            </div>
+          </div>
+        </div>
+      </div>
+
+	  </div>
+  </body>
+</html>
