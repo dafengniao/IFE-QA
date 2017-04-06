@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+	css3 无缝滚动动画，鼠标放上暂停；
+	滚动内容双份，动画margin-top为负内容高度一半；
+	动画一直执行（infinite），匀速（linear）
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	.news_list_box{
+		width: 1100px;
+	}
+	body{
+		margin: 0;
+		padding: 0;
+	}
+	.list{
+		position: relative;
+	    overflow: hidden;
+	    height: 250px;
+	    margin-top: 105px;
+	    margin-bottom: 30px;
+	}
+	ul {
+	    list-style: none;
+	    overflow: hidden;
+	    padding: 0;
+	    margin: 0;
+	}
+	ul li {
+	    margin-top: 0 !important;
+	    margin-bottom: 20px;
+	}
+	ul li {
+	    width: 426px;
+	    float: left;
+	    margin-top: 105px;
+	    list-style-image: url(../images/dian_28.png);
+	    text-align: left;
+	    list-style-position: inside;
+	    margin-left: 16px;
+	    margin-right: 126px;
+	}
+	.cssslide{
+	    animation: slidea 16s linear infinite;
+	    -webkit-animation: slidea 16s linear infinite;
+	}
+	.cssslide:hover{
+		animation-play-state:paused;
+		-webkit-animation-play-state:paused;
+	}
+	@keyframes slidea {
+	    0% {
+	        margin-top: 0;
+	    }
+	    100% {
+	        margin-top: -408px;
+	    }
+	}
+	@-webkit-keyframes slidea {
+	    0% {
+	        margin-top: 0;
+	    }
+	    100% {
+	        margin-top: -408px;
+	    }
+	}
+
+	</style>
+</head>
+<body>
+	<div class="list">
+	<div class="news_list_box cssslide">
+        <ul>
+            <li><a href="http://redian.xfrb.com.cn/kejichuangxin/2016-10-24/162892.html" rel="nofollow" target="_blank">
+                人人信用管理有限公司预告：互联网金融如何玩转大数据风控<br>
+                ......................................................... 消费日报网 (2016-10-24)
+            </a></li>
+        </ul>
+        <ul>
+            <li><a href="http://mt.sohu.com/20161017/n470484231.shtml" rel="nofollow" target="_blank">监管政策如暴风骤雨，人人信用管理有限公司为互金平台保驾护航<br>
+                ......................................................... 搜狐媒体 (2016-10-17)
+            </a></li>
+            <li style="margin-left: 90px;margin-right: 16px;"><a href="http://mt.sohu.com/20160808/n463093844.shtml" rel="nofollow" target="_blank">逾期成金融机构第一风险，行业疾呼逾期名单<br>
+                ......................................................... 搜狐媒体 (2016-08-08)
+            </a></li>
+        </ul>
+        <ul>
+            <li style="margin-top: 20px;"><a href="http://gx.sina.com.cn/news/hangye/2016-07-29/detail_hy-ifxunyxy5954604.shtml" rel="nofollow" target="_blank">当前P2P平台风险分析<br>
+                ......................................................... 新浪网 (2016-07-29)
+            </a></li>
+            <li style="margin-left: 90px;margin-right: 16px; margin-top: 20px;"><a href="http://gx.sina.com.cn/news/hangye/2016-06-21/detail_hy-ifxtfrrf0753434.shtml" rel="nofollow" target="_blank">大数据风控的场景化趋势——人人信用管理有限公司<br>
+                ......................................................... 新浪网 (2016-06-30)
+            </a></li>
+        </ul>
+        <ul>
+            <li style="margin-top: 20px;"><a href="http://toutiao.com/i6291118161731256833/" rel="nofollow" target="_blank">“大数据＋征信”吸睛2016贵阳数博会<br>
+                ......................................................... 今日头条 (2016-06-30)</a></li>
+            <li style="margin-left: 90px;margin-right: 16px;margin-top: 20px;"><a href="http://www.jpm.cn/article-8550-1.html" rel="nofollow" target="_blank">一线：金融属性数据对防控信贷风险更有意义<br>
+                ......................................................... 金评媒 (2016-05-09)</a></li>
+        </ul>
+        <ul>
+            <li style="margin-top: 20px;"><a href="http://www.ifc1000.org/2016/qqfh_0428/361.html" rel="nofollow" target="_blank">王晨：金融风险领域造成了坏账率高 审批效率低<br>
+                ......................................................... 互联网金融千人俱乐部 (2016-4-28)</a></li>
+            <li style="margin-left: 90px;margin-right: 16px;  margin-top: 20px;"><a href="http://www.p2pchina.com/article-44475-1.html" rel="nofollow" target="_blank">王晨：信用体系需尽快完善以促进互金发展<br>
+                ......................................................... 网贷中国 (2016-4-15)</a></li>
+        </ul>
+    <ul>
+            <li><a href="http://redian.xfrb.com.cn/kejichuangxin/2016-10-24/162892.html" rel="nofollow" target="_blank">
+                人人信用管理有限公司预告：互联网金融如何玩转大数据风控<br>
+                ......................................................... 消费日报网 (2016-10-24)
+            </a></li>
+        </ul><ul>
+            <li><a href="http://mt.sohu.com/20161017/n470484231.shtml" rel="nofollow" target="_blank">监管政策如暴风骤雨，人人信用管理有限公司为互金平台保驾护航<br>
+                ......................................................... 搜狐媒体 (2016-10-17)
+            </a></li>
+            <li style="margin-left: 90px;margin-right: 16px;"><a href="http://mt.sohu.com/20160808/n463093844.shtml" rel="nofollow" target="_blank">逾期成金融机构第一风险，行业疾呼逾期名单<br>
+                ......................................................... 搜狐媒体 (2016-08-08)
+            </a></li>
+        </ul><ul>
+            <li style="margin-top: 20px;"><a href="http://gx.sina.com.cn/news/hangye/2016-07-29/detail_hy-ifxunyxy5954604.shtml" rel="nofollow" target="_blank">当前P2P平台风险分析<br>
+                ......................................................... 新浪网 (2016-07-29)
+            </a></li>
+            <li style="margin-left: 90px;margin-right: 16px; margin-top: 20px;"><a href="http://gx.sina.com.cn/news/hangye/2016-06-21/detail_hy-ifxtfrrf0753434.shtml" rel="nofollow" target="_blank">大数据风控的场景化趋势——人人信用管理有限公司<br>
+                ......................................................... 新浪网 (2016-06-30)
+            </a></li>
+        </ul><ul>
+            <li style="margin-top: 20px;"><a href="http://toutiao.com/i6291118161731256833/" rel="nofollow" target="_blank">“大数据＋征信”吸睛2016贵阳数博会<br>
+                ......................................................... 今日头条 (2016-06-30)</a></li>
+            <li style="margin-left: 90px;margin-right: 16px;margin-top: 20px;"><a href="http://www.jpm.cn/article-8550-1.html" rel="nofollow" target="_blank">一线：金融属性数据对防控信贷风险更有意义<br>
+                ......................................................... 金评媒 (2016-05-09)</a></li>
+        </ul><ul>
+            <li style="margin-top: 20px;"><a href="http://www.ifc1000.org/2016/qqfh_0428/361.html" rel="nofollow" target="_blank">王晨：金融风险领域造成了坏账率高 审批效率低<br>
+                ......................................................... 互联网金融千人俱乐部 (2016-4-28)</a></li>
+            <li style="margin-left: 90px;margin-right: 16px;  margin-top: 20px;"><a href="http://www.p2pchina.com/article-44475-1.html" rel="nofollow" target="_blank">王晨：信用体系需尽快完善以促进互金发展<br>
+                ......................................................... 网贷中国 (2016-4-15)</a></li>
+        </ul></div></div>
+</body>
+</html>

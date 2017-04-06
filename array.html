@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>数组排序</title>
+</head>
+<body>
+	<script>
+		document.write('数组排序（从大到小）<br>');
+		var brr = [1,5,2,7,6,3,4];
+		for (var i =0; i< brr.length-1;i++){
+			for(var j=i+1; j< brr.length; j++){
+				if (brr[j]>brr[i]){
+					var tmp = brr[i];
+					brr[i] = brr[j];
+					brr[j] = tmp;
+				}
+			}
+		}
+		document.write(brr+'<br><br>');
+
+
+		document.write('数组排序（从小到大）<br>');
+		for (var i =0; i< brr.length-1;i++){
+			for(var j=i+1; j< brr.length; j++){
+				if (brr[j]<brr[i]){
+					var tmp = brr[i];
+					brr[i] = brr[j];
+					brr[j] = tmp;
+				}
+			}
+		}
+		document.write(brr+'<br><br>');
+
+
+		var arr = [1,2];
+
+		//var a = 1; var b =2; var tmp =0;
+		if(arr[1]>arr[0]){
+			var tmp = arr[0];
+			arr[0] = arr[1];
+			arr[1] = tmp;
+		}
+		document.write(arr)
+
+	</script>
+</body>
+</html>
