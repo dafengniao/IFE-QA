@@ -23,3 +23,7 @@ margin 简写属性在一个声明中设置所有外边距属性。该属性可�
 ## array.html	
 https://dafengniao.github.io/IFE-QA/array.html
 数组排序方法
+
+## rem.html	
+https://dafengniao.github.io/IFE-QA/rem.html
+针对手机版rem自适应
