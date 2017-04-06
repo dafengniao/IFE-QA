@@ -52,17 +52,20 @@ function init() {
 
         function iteratorFactory(i){
           var onclick = function(e){
-              alert(i)
+              alert(this.innerText)
           }
             return onclick;
         }
         var clickBoxs = document.getElementsByTagName('li')
         for (var i = 0; i < clickBoxs.length; i++){
-            clickBoxs[i].onclick = iteratorFactory(i)
+            clickBoxs[i].onclick = iteratorFactory(i);
         }
     };
     </script>
           <style type="text/css">
+          body{
+            margin: 0;
+          }
           ul{
             display: flex;
             margin: 0;
@@ -75,10 +78,13 @@ function init() {
             background-color: #000;
             height: 200px;
           }
-          ul li:last-child{
+          ul li{
             flex: 1;
             height: 200px;
-            background-color: red
+            color: #be8914;
+          }
+          ul li:nth-child(2n){
+            background-color: #f36;
           }
           </style>  
     </head>
@@ -86,6 +92,9 @@ function init() {
             <ul>
                     <li>123</li>
                     <li>456</li>
+                    <li>789</li>
+                    <li>012</li>
+                    <li>345</li>
             </ul>
     </body>
     </html>

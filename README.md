@@ -8,7 +8,7 @@ css3 无缝滚动动画，鼠标放上暂停；
 动画一直执行（infinite），匀速（linear）
 
 ## margin.html
-https://dafengniao.github.io/IFE-QA/magin.html
+https://dafengniao.github.io/IFE-QA/margin.html
 定义和用法
 margin 简写属性在一个声明中设置所有外边距属性。该属性可以有 1 到 4 个值。
 说明
