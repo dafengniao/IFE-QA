@@ -1,8 +1,8 @@
 # IFE-QA
 前端css、js基础问题
 
-## index
-https://dafengniao.github.io/IFE-QA
+## click
+https://dafengniao.github.io/IFE-QA/click
 左侧固定宽度，display(flex);
 点击某一区块获取某一区块的内容；
 
