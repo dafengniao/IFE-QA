@@ -32,35 +32,44 @@ function init() {
             <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
             <title></title>
     <script>
-    // window.onload = function(){
-    //     var aLi = document.getElementsByTagName('li');
-    //     for (var i=0;i<aLi.length;i++){
-    //         (function(i){
-    //                 aLi[i].onclick = function(){
-    //                         alert(i);
-    //                 };
-    //         })(i);
-    //     }
-    // };
     window.onload = function(){
         // var aLi = document.getElementsByTagName('li');
-        // for (let i=0;i<aLi.length;i++){
-        //     aLi[i].onclick = function(){
-        //             alert(i);
-        //     };
+        // for (var i=0;i<aLi.length;i++){
+        //     (function(i){
+        //             aLi[i].onclick = function(){
+        //                     alert(this.innerText);
+        //             };
+        //     })(i);
         // }
+        var ul = document.querySelector('ul');
 
-        function iteratorFactory(i){
-          var onclick = function(e){
-              alert(this.innerText)
+        ul.addEventListener('click', function(event) {
+          if (event.target.tagName.toLowerCase() === 'li') {
+            // some code
+            console.log(event);
+            alert(event.target.innerText);
           }
-            return onclick;
-        }
-        var clickBoxs = document.getElementsByTagName('li')
-        for (var i = 0; i < clickBoxs.length; i++){
-            clickBoxs[i].onclick = iteratorFactory(i);
-        }
+        });
     };
+    // window.onload = function(){
+    //     // var aLi = document.getElementsByTagName('li');
+    //     // for (let i=0;i<aLi.length;i++){
+    //     //     aLi[i].onclick = function(){
+    //     //             alert(i);
+    //     //     };
+    //     // }
+
+    //     function iteratorFactory(i){
+    //       var onclick = function(e){
+    //           alert(this.innerText)
+    //       }
+    //         return onclick;
+    //     }
+    //     var clickBoxs = document.getElementsByTagName('li')
+    //     for (var i = 0; i < clickBoxs.length; i++){
+    //         clickBoxs[i].onclick = iteratorFactory(i);
+    //     }
+    // };
     </script>
           <style type="text/css">
           body{
