@@ -44,7 +44,32 @@
 					content[event.target.dataset.id].style.cssText = 'display:bloock;'
 				}
 			})
+
+			/**
+			  * 实例Tab方法
+			**/
+			// function Tab(id,con){
+			// 	var tab = document.getElementById(id).getElementsByTagName('li');
+			// 	var content = document.getElementById(con).getElementsByTagName('li');
+			// 	var j = tab.length;
+			// 	for(var i =0; i<j; i++){
+			// 		(function(i){
+			// 			tab[i].onclick = function(){
+			// 				for(var a =0; a<j; a++){
+			// 					tab[a].style.cssText = '';
+			// 					content[a].style.cssText = 'display:none';
+			// 				}
+			// 				this.style.cssText = 'background-color:#be8914;'+'color:#fff;';
+			// 				content[i].style.cssText = 'display:bloock;'
+			// 			}
+			// 		})(i);
+			// 	}
+			// }
+			// new Tab('tab','content');
 		}
+
+
+
 	</script>
 	<style type="text/css">
 		body{
