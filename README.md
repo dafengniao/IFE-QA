@@ -31,3 +31,9 @@ https://dafengniao.github.io/IFE-QA/array<br/>
 ## rem
 https://dafengniao.github.io/IFE-QA/rem<br/>
 针对手机版rem自适应
+
+## tab
+https://dafengniao.github.io/IFE-QA/tab<br/>
+原生js实现的tab切换<br/>
+第一种for写法
+第二张为时间代理，ul的点击监听子节点li的id进行tab的切换。
