@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body,html{
+			margin: 0;
+			padding: 0;
+		}
+		.content{
+			width: 100%;
+			margin:50px auto;
+		}
+		.fontt{
+			width: 100px;
+			line-height: 50px;
+			font-size: 24px;
+			background: #eee;
+			margin:0 auto;
+			text-align: center;
+		}
+		button{
+			width: 140px;
+			line-height: 40px;
+			font-size: 20px;
+			margin:30px 10px;
+			text-align: center;
+			display: inline-block;
+		}
+		.btnalign{
+			width: 320px;
+			margin: 0 auto;
+			font-size: 0;
+		}
+	</style>
+</head>
+<body>
+<div class="content">
+	<div class="fontt">0</div>
+	<div class="btnalign">
+		<button onclick="add()">+</button>
+		<button onclick="ccc()">-</button>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	function numadd(){
+		var num = document.getElementsByClassName('fontt')[0].innerText;
+		return function(){
+			num++;
+			console.log(num)
+			document.getElementsByClassName('fontt')[0].innerText = num;
+		}
+	}
+	function numjian(){
+		var jian = document.getElementsByClassName('fontt')[0].innerText;
+		return function(){
+			jian=jian-1;
+			console.log(jian)
+			document.getElementsByClassName('fontt')[0].innerText = jian;
+		}
+	}
+	var add = numadd();
+	var ccc = numjian();
+</script>
+</html>

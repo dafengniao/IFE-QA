@@ -37,3 +37,8 @@ https://dafengniao.github.io/IFE-QA/tab<br/>
 原生js实现的tab切换<br/>
 第一种for写法
 第二张为时间代理，ul的点击监听子节点li的id进行tab的切换。
+
+## closure
+https://dafengniao.github.io/IFE-QA/closure<br/>
+闭包<br />
+加、减互相独立。
