@@ -42,3 +42,8 @@ https://dafengniao.github.io/IFE-QA/tab<br/>
 https://dafengniao.github.io/IFE-QA/closure<br/>
 闭包<br />
 加、减互相独立。
+
+## target
+https://dafengniao.github.io/IFE-QA/target<br/>
+拖拽功能<br>
+原生封装拖拽插件
