@@ -34,14 +34,16 @@
 			tab.addEventListener('click',function(event){
 				//this.dataset.tab = '';
 				for( var i = 0; i < j; i++ ){
-					document.getElementById('tab').getElementsByTagName('li')[i].style.cssText = '';
-					document.getElementById('tab').getElementsByTagName('li')[i].dataset.id = i;
-					content[i].style.cssText = 'display:none';
+					//document.getElementById('tab').getElementsByTagName('li')[i].style.cssText = '';
+					//document.getElementById('tab').getElementsByTagName('li')[i].dataset.id = i;
+					//content[i].style.cssText = 'display:none';
 				}
 				if(event.target.tagName.toLowerCase() === 'li'){
-					//console.log(event)
-					event.target.style.cssText = 'background-color:#be8914;'+'color:#fff;';
-					content[event.target.dataset.id].style.cssText = 'display:bloock;'
+					document.getElementById('line').style.left = event.target.offsetLeft+'px';
+					document.getElementById('content').style.left = -event.target.offsetLeft * 4 +'px';
+					console.log(event)
+					//event.target.style.cssText = 'background-color:#be8914;'+'color:#fff;';
+					//content[event.target.dataset.id].style.cssText = 'display:bloock;'
 				}
 			},false)
 
@@ -78,8 +80,10 @@
 		}
 		#tab{
 			display: flex;
-			margin: 0;
+			margin: 0 auto;
 			padding: 0;
+			position: relative;
+			width: 600px;
 		}
 		#tab li{
 			flex: 1;
@@ -90,31 +94,72 @@
 			background: #ccc;
 			position: relative;
 		}
+		#tab li:first-child:before{
+			content: '';
+			height: 100%;
+			position: absolute;
+			border: 1px solid rgba(0,0,0,0);
+			left: 0;
+			top: 0;
+			z-index: 2;
+		}
 		#tab li+li:before{
 			content: '';
-			widows: 1px;
 			height: 100%;
 			position: absolute;
 			border: 1px solid #fff;
 			left: 0;
 			top: 0;
+			z-index: 2;
+		}
+		#line{
+			width: 148px;
+			position: absolute;
+			border: 1px solid #000;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			transition: left 0.2s ease;
+		}	
+		.wthover{
+			width: 600px;
+		    margin: 0 auto;
+		    overflow: hidden;
+		    height: 42px;
+		    position: relative;
+		}
+		#content{
+			width: 2400px;
+    		margin: 20px auto;
+    		position: absolute;
+    		left: 0;
+    		transition: left 0.8s ease;
+    		top: 0;
+		}
+		#content li {
+			display: inline-block;
+			width: 600px;
+			float: left;
 		}
 	</style>
 </head>
 <body>
+
 	<ul id="tab">
-		<li style="background-color: rgb(190, 137, 20); color: rgb(255, 255, 255);">事件一</li>
+		<div id="line"></div>
+		<li>事件一</li>
 		<li>事件二</li>
 		<li>事件三</li>
 		<li>事件四</li>
 	</ul>
 
-
-	<ul id="content">
-		<li>事件一事件一事件一事件一事件一事件一</li>
-		<li style="display: none;">事件二事件二事件二事件二事件二事件二</li>
-		<li style="display: none;">事件三事件三事件三事件三事件三事件三</li>
-		<li style="display: none;">事件四事件四事件四事件四事件四事件四</li>
-	</ul>
+	<div class="wthover">
+		<div id="content">
+			<li>事件一事件一事件一事件一事件一事件一</li>
+			<li>事件二事件二事件二事件二事件二事件二</li>
+			<li>事件三事件三事件三事件三事件三事件三</li>
+			<li>事件四事件四事件四事件四事件四事件四</li>
+		</ul>
+	</div>
 </body>
 </html>
