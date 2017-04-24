@@ -47,6 +47,22 @@
 				}
 			},false)
 
+			tab.addEventListener('touchstart',function(event){
+				//this.dataset.tab = '';
+				for( var i = 0; i < j; i++ ){
+					//document.getElementById('tab').getElementsByTagName('li')[i].style.cssText = '';
+					//document.getElementById('tab').getElementsByTagName('li')[i].dataset.id = i;
+					//content[i].style.cssText = 'display:none';
+				}
+				if(event.target.tagName.toLowerCase() === 'li'){
+					document.getElementById('line').style.left = event.target.offsetLeft+'px';
+					document.getElementById('content').style.left = -event.target.offsetLeft * 4 +'px';
+					console.log(event)
+					//event.target.style.cssText = 'background-color:#be8914;'+'color:#fff;';
+					//content[event.target.dataset.id].style.cssText = 'display:bloock;'
+				}
+			},false)
+
 			/**
 			  * 实例Tab方法
 			**/
