@@ -17,7 +17,6 @@
             win.addEventListener(resizeEvt, recalc, false);
             doc.addEventListener('DOMContentLoaded', recalc, false);
         })(document, window);
-
         window.onload=function(){
             document.getElementById('loading-wrapper').style.cssText="display:none";
         }
@@ -55,40 +54,92 @@
                 width: 20.0rem;
                 height: 10.133333rem;
             }
-            #loading-wrapper {
+            .loading {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
-                width: 120px;
-                height: 120px;
-                border-radius: 4px;
+                margin-top: -5.6rem;
+                margin-left: -3.2rem;
+                width: 6.4rem;
+                height: 6.4rem;
+                border-radius: 0.213333rem;
                 background: rgba(0, 0, 0, 0.6);
             }
-
-            #loading-wrapper img {
-                position: absolute;
-                bottom: 10px;
-            }
-
-            #loading-wrapper .word {
-                font-size: 14px;
+            .loading .text {
+                font-size: 0.373333rem;
                 position: absolute;
                 text-align: center;
-                width: 100%;
-                bottom: 15px;
-                color: #fff;
+                width:100%;
+                bottom:50%;
+                color:#fff;
+                margin-bottom:-1.6rem;
+            }
+            .v-spinner{
+                width:6.4rem;
+                text-align:center;
+                height:1.173333rem;
+                top:50%;
+                position:absolute;
+                margin-top:-1.12rem;
+            }
+            .v-beat{
+                animation-fill-mode: both;
+                animation-timing-function: ease-out;
+                animation-iteration-count: infinite;
+                animation-duration: 0.75s;
+                animation-name: v-pulseStretchDelay;
+                display: inline-block;
+                border-radius: 100%;
+                margin: 0.266667rem;
+                height: 0.533333rem;
+                width: 0.533333rem;
+                background-color: #fff;
+            }
+            .v-beat-one{
+                animation-delay: 0.12s;
+            }
+            .v-beat-two{
+                animation-delay: 0.24s;
+            }
+            .v-beat-three{
+                animation-delay: 0.36s;
+            }
+            @-webkit-keyframes v-pulseStretchDelay{
+                0%,100%{
+                     -webkit-transform: scale(0);
+                             transform: scale(0);
+                }
+                50%{
+                     -webkit-transform: scale(1);
+                             transform: scale(1);
+                }
+            }
+
+            @keyframes v-pulseStretchDelay{
+                0%,100%{
+                    -webkit-transform: scale(0);
+                            transform: scale(0);
+                }
+                50%{
+                    -webkit-transform: scale(1);
+                            transform: scale(1);
+                }
             }
         </style>
-
     </head>
 
     <body>
-        <div id="loading-wrapper">
-            <svg width="120" height="120">
-                <image xlink:href="./images/loading-spinning-bubbles.svg" src="./images/loading.gif" width="120" height="120" />
-            </svg>
-            <div class="word">请稍候</div>
+        <div class="loading" id="loading-wrapper">
+            <div class="v-spinner">
+                <div class="v-beat v-beat-one">
+                </div>
+                <div class="v-beat v-beat-two">
+                </div>
+                <div class="v-beat v-beat-three">
+                </div>
+            </div>
+            <div class="text">请稍后</div>
+          </div>
         </div>
         <div class="help">
             <div class="banner">
