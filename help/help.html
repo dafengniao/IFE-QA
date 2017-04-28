@@ -17,6 +17,10 @@
             win.addEventListener(resizeEvt, recalc, false);
             doc.addEventListener('DOMContentLoaded', recalc, false);
         })(document, window);
+
+        window.onload=function(){
+            document.getElementById('loading-wrapper').style.cssText="display:none";
+        }
         </script>
         <style type="text/css">
             html, body, div, span, applet, object, iframe,
@@ -51,11 +55,41 @@
                 width: 20.0rem;
                 height: 10.133333rem;
             }
+            #loading-wrapper {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 120px;
+                height: 120px;
+                border-radius: 4px;
+                background: rgba(0, 0, 0, 0.6);
+            }
+
+            #loading-wrapper img {
+                position: absolute;
+                bottom: 10px;
+            }
+
+            #loading-wrapper .word {
+                font-size: 14px;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                bottom: 15px;
+                color: #fff;
+            }
         </style>
 
     </head>
 
     <body>
+        <div id="loading-wrapper">
+            <svg width="120" height="120">
+                <image xlink:href="./images/loading-spinning-bubbles.svg" src="./images/loading.gif" width="120" height="120" />
+            </svg>
+            <div class="word">请稍候</div>
+        </div>
         <div class="help">
             <div class="banner">
                 <img src="./images/banner.jpg" align="absmiddle">
