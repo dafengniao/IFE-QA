@@ -17,9 +17,6 @@
             win.addEventListener(resizeEvt, recalc, false);
             doc.addEventListener('DOMContentLoaded', recalc, false);
         })(document, window);
-        window.onload=function(){
-            document.getElementById('loading-wrapper').style.cssText="display:none";
-        }
         </script>
         <style type="text/css">
             html, body, div, span, applet, object, iframe,
@@ -54,111 +51,19 @@
                 width: 20.0rem;
                 height: 10.133333rem;
             }
-            .loading {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-top: -5.6rem;
-                margin-left: -3.2rem;
-                width: 6.4rem;
-                height: 6.4rem;
-                border-radius: 0.213333rem;
-                background: rgba(0, 0, 0, 0.6);
-            }
-            .loading .text {
-                font-size: 0.746667rem;
-                position: absolute;
-                text-align: center;
-                width:100%;
-                bottom:50%;
-                color:#fff;
-                margin-bottom:-1.6rem;
-            }
-            .v-spinner{
-                width:6.4rem;
-                text-align:center;
-                height:1.173333rem;
-                top:50%;
-                position:absolute;
-                margin-top:-1.12rem;
-            }
-            .v-beat{
-                display: inline-block;
-                border-radius: 100%;
-                margin: 0.266667rem;
-                height: 0.533333rem;
-                width: 0.533333rem;
-                background-color: #fff;
-            }
-            @-webkit-keyframes scale {
-              0% {
-                -webkit-transform: scale(1);
-                        transform: scale(1);
-                opacity: 1; }
-
-              45% {
-                -webkit-transform: scale(0.1);
-                        transform: scale(0.1);
-                opacity: 0.7; }
-
-              80% {
-                -webkit-transform: scale(1);
-                        transform: scale(1);
-                opacity: 1; } 
-            }
-            @keyframes scale {
-              0% {
-                -webkit-transform: scale(1);
-                        transform: scale(1);
-                opacity: 1; }
-
-              45% {
-                -webkit-transform: scale(0.1);
-                        transform: scale(0.1);
-                opacity: 0.7; }
-
-              80% {
-                -webkit-transform: scale(1);
-                        transform: scale(1);
-                opacity: 1; } 
-            }
-            .v-beat.v-beat-one {
-              -webkit-animation: scale 0.75s 0.12s infinite cubic-bezier(.2, .68, .18, 1.08);
-                      animation: scale 0.75s 0.12s infinite cubic-bezier(.2, .68, .18, 1.08); 
-            }
-            .v-beat.v-beat-two {
-              -webkit-animation: scale 0.75s 0.24s infinite cubic-bezier(.2, .68, .18, 1.08);
-                      animation: scale 0.75s 0.24s infinite cubic-bezier(.2, .68, .18, 1.08); 
-            }
-            .v-beat.v-beat-three {
-              -webkit-animation: scale 0.75s 0.36s infinite cubic-bezier(.2, .68, .18, 1.08);
-                      animation: scale 0.75s 0.36s infinite cubic-bezier(.2, .68, .18, 1.08); 
-            }
         </style>
     </head>
 
     <body>
-        <div class="loading" id="loading-wrapper">
-            <div class="v-spinner">
-                <div class="v-beat v-beat-one">
-                </div>
-                <div class="v-beat v-beat-two">
-                </div>
-                <div class="v-beat v-beat-three">
-                </div>
-            </div>
-            <div class="text">请稍后</div>
-          </div>
-        </div>
         <div class="help">
             <div class="banner">
-                <img src="./images/banner.jpg" align="absmiddle">
-                <img src="./images/help-a.jpg" align="absmiddle">
-                <img src="./images/help-b.jpg" align="absmiddle">
-                <img src="./images/help-c.jpg" align="absmiddle">
-                <img src="./images/help-d.jpg" align="absmiddle">
-                <img src="./images/help-e.jpg" align="absmiddle">
-                <img src="./images/help-f.jpg" align="absmiddle">
+                <img src="./img/banner.jpg" align="absmiddle">
+                <img src="./img/help-a.jpg" align="absmiddle">
+                <img src="./img/help-b.jpg" align="absmiddle">
+                <img src="./img/help-c.jpg" align="absmiddle">
+                <img src="./img/help-d.jpg" align="absmiddle">
+                <img src="./img/help-e.jpg" align="absmiddle">
+                <img src="./img/help-f.jpg" align="absmiddle">
             </div>
         </div>
     </body>

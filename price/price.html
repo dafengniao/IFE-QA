@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
+        <title>驿站投递包裹指南</title>
+        <script type="text/javascript">
+        	(function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 37.5 * (clientWidth / 750) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+        </script>
+        <style type="text/css">
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video ,input {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+            }
+            .banner,.price{
+                font-size: 0;
+            }
+            .banner img{
+                width: 20.0rem;
+                height: 12.533333rem;
+            }
+            .count{
+                width: 20.0rem;
+                height: 9.333333rem;
+                background: url('./img/price_b.jpg');
+                background-size: 100%;
+                position: relative;
+            }
+            .count .decrite{
+                width: 14.933333rem;
+                height: 4.8rem;
+                position: absolute;
+                top: 2.933333rem;
+                left:2.0rem;
+                padding: 0 0.533333rem;
+                color: #532025;
+                font-size: 0.8rem;
+            }
+            .count .decrite span{
+                font-size: 0.693333rem;
+                line-height: 1.28rem;
+                display: block;
+            }
+            .count .decrite .num,.charg .decrite .num{
+                line-height: 1.333333rem;
+                font-size: 0.746667rem;
+            }
+            .count .decrite .mouse,.charg .decrite .mouse{
+                line-height: 0.933333rem;
+                font-size: 0.746667rem;
+            }
+            .charg{
+                width: 20.0rem;
+                height: 11.2rem;
+                background: url('./img/price_c.jpg');
+                background-size: 100%;
+                position: relative;
+            }
+            .charg .decrite{
+                width: 14.933333rem;
+                position: absolute;
+                top: 3.466667rem;
+                left:2.0rem;
+                padding: 0 0.533333rem;
+                color: #532025;
+                font-size: 0.8rem;
+                line-height: 1.066667rem;
+            }
+            .charg .decrite .num{
+                margin-top: 0.32rem;
+            }
+            .money{
+                width: 20.0rem;
+                height: 12.8rem;
+                background: url('./img/price_d.jpg');
+                background-size: 100%;
+                position: relative;
+                font-size: 0;
+            }
+            .money .decrite{
+                width: 6.4rem;
+                height: 2.4rem;
+                color: #532025;
+                font-size: 0.8rem;
+                line-height: 1.066667rem;
+                position: absolute;
+                top: 4.16rem;
+                right: 4.266667rem;
+            }
+            .shop_btn{
+                background:#fcd120;
+                width: 13.866667rem; 
+                height: 2.933333rem;
+                border-radius: 0.266667rem;
+                position: absolute;
+                left: 3.066667rem;
+                bottom: 1.6rem;
+                text-align: center;
+                line-height: 2.933333rem;
+                color: #532025;
+                font-size: 0.853333rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="price">
+            <div class="banner">
+                <img src="./img/price_a.jpg" align="absmiddle">
+            </div>
+            <div class="count">
+                <div class="decrite">
+                    裹儿投递目前按照目前首重价+续重续重价
+                    <span>(详见裹儿投递计费方案)</span>
+                    <div class="num">公式</div>
+                    <div class="mouse">实际价格=首重价格+续重价格*(包裹实际重量-首重）</div>
+                </div>
+            </div>
+            <div class="charg">
+                <div class="decrite">
+                    您的包裹到裹儿包裹处理中心会由高精度的电子秤称重，如果您下单时选择的价格过低，需要您补差价哦
+                    <div class="num">公式</div>
+                    <div class="mouse">补差价价格=实际价格(见上面公式)-已付价格</div>
+                </div>
+            </div>
+            <div class="money">
+                <div class="decrite">
+                    使用裹儿邮票支付可能更省钱哦
+                </div>
+                <div class="shop_btn">
+                    前往邮票商城
+                </div>
+            </div>
+            <img src="./img/price_e.jpg" align="absmiddle" width="100%">
+            <img src="./img/price_f.jpg" align="absmiddle" width="100%">
+        </div>
+    </body>
+</html>
